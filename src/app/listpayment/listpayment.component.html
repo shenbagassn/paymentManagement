@@ -12,10 +12,11 @@
     </thead>
     
     <tbody>
-    <tr *ngFor="let arr of paymentArray;index as i">
+    <tr *ngFor="let arr of paymentArray;index as i;even as e;odd as o"
+    [ngClass]="{'even':e,'odd':o}">
         <td>{{i+1}} </td>
-        <td>{{arr.username}}</td>
-        <td>{{arr.price}}</td>
+        <td>{{arr.username|titlecase}}</td>
+        <td>{{arr.price|currency}}</td>
         <td>{{arr.cardNo}}</td>
     </tr>
 </tbody>
