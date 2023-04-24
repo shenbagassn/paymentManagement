@@ -1,0 +1,22 @@
+<h1>List Payment</h1>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th> S.No </th>
+            <th> Name </th>
+            <th> Price </th>
+            <th> Card Number </th>
+           
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr *ngFor="let arr of paymentArray;index as i">
+        <td>{{i+1}} </td>
+        <td>{{arr.username}}</td>
+        <td>{{arr.price}}</td>
+        <td>{{arr.cardNo}}</td>
+    </tr>
+</tbody>
+</table>

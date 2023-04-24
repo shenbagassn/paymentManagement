@@ -1,0 +1,9 @@
+<h1 align="center">Payment Mangement</h1>
+<h2>Add Payment</h2>
+Name: <input type="text" class="form-control" [(ngModel)]="nametxtbox">  <br>
+Price: <input type="text"class="form-control" [(ngModel)]="pricebox"> <br>
+Card No: <input type="text" class="form-control" [(ngModel)]="cardnobox"> <br> <br>
+<button class="btn btn-primary" (click)="addPayment(nametxtbox,pricebox,cardnobox)">Add Payment</button> &nbsp;
+<button class="btn btn-danger" >Clear</button>
+<hr>
+    <app-listpayment></app-listpayment>
