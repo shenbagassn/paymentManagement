@@ -1,4 +1,12 @@
 <h1>List Payment</h1>
+<select [(ngModel)]="selectOption">
+    <option value="">Select by</option>
+    <option value="username">Name</option>
+    <option value="price">Price</option>
+    <option value="cardNo">Card Number</option>
+</select> &nbsp;
+
+<input type="text" placeholder="Search" [(ngModel)]="searchValue">
 
 <table class="table">
     <thead class="thead-light">
@@ -12,7 +20,7 @@
     </thead>
     
     <tbody>
-    <tr *ngFor="let arr of paymentArray;index as i;even as e;odd as o"
+    <tr *ngFor="let arr of paymentArray|filter:selectOption:searchValue ;index as i;even as e;odd as o"
     [ngClass]="{'even':e,'odd':o}">
         <td>{{i+1}} </td>
         <td>{{arr.username|titlecase}}</td>

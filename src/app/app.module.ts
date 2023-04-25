@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AddpaymentComponent } from './addpayment/addpayment.component';
 import { ListpaymentComponent } from './listpayment/listpayment.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddpaymentComponent,
-    ListpaymentComponent
+    ListpaymentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

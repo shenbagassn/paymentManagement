@@ -8,6 +8,9 @@ import { PaymentService } from '../payment.service';
 })
 export class ListpaymentComponent implements OnInit {
   paymentArray:any[]=[];
+  searchValue:any='';
+  selectOption:string='';
+
   constructor(pymnt2:PaymentService) {
     this.paymentArray=pymnt2.servicePaymentArray;
    }
